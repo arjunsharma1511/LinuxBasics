@@ -1,0 +1,1414 @@
+LINUX LAUNCHPAD
+============================================================
+
+This document explains every part of the Linux Basics Lab.
+It assumes that you have never used Linux or a terminal before.
+
+Read one step, perform that step in the lab, and then return to this guide.
+Do not rush. There is no timer and every activity allows another attempt.
+
+
+LAB SUMMARY
+===========
+
+Difficulty: Absolute beginner
+Expected time: 2 to 3 hours
+Tracked activities: 53
+Guided terminal commands: 50
+Final knowledge questions: 8
+Final practical challenge: Find one hidden flag
+Certificate: Yes
+
+This is a browser simulation.
+No command in the lab runs on your real computer.
+No real files are created, changed or removed.
+
+
+The certificate unlocks after all activities are complete.
+
+
+PART 1 - OPEN THE LAB
+=====================
+
+1. Open index.html or the published GitHub Pages link.
+2. Wait for the heading "Meet Linux. One command at a time."
+3. Look at the top-right progress display.
+4. A new attempt should say 0/53 activities.
+5. If it shows a higher number, your browser remembered previous progress.
+6. Do not click Reset unless you want to erase all saved progress.
+7. Click the blue "Begin from zero" button.
+8. The page moves to the section titled "What is Linux?"
+
+
+PART 2 - UNDERSTAND THE FOUR BASIC IDEAS
+========================================
+
+WHAT IS LINUX?
+
+Linux is an open-source operating system family.
+An operating system helps manage hardware, memory, files, programs and users.
+Linux is used on servers, cloud systems, supercomputers, embedded devices,
+security workstations and normal desktop computers.
+
+WHAT IS THE KERNEL?
+
+The kernel is the operating system core. It communicates with hardware and
+manages resources such as memory, processes and devices.
+
+WHAT IS A DISTRIBUTION?
+
+A distribution, often shortened to distro, is a complete Linux system built
+from the Linux kernel and a collection of tools and software.
+Examples include Debian, Ubuntu, Fedora and Kali Linux.
+
+WHAT IS A TERMINAL?
+
+The terminal is an application window where you type commands and read output.
+
+WHAT IS A SHELL?
+
+The shell runs inside the terminal. It reads commands and asks the operating
+system to perform them. Bash and Zsh are common shells.
+
+Memory sentence:
+The terminal is the window; the shell interprets the commands inside it.
+
+
+PART 3 - COMPLETE THE ORIENTATION CHECK
+=======================================
+
+1. Scroll to the box titled "Confirm the four foundation ideas."
+2. Click the dropdown under question 1.
+3. Select "Hardware, files, memory and programs."
+4. Click the dropdown under question 2.
+5. Select "The core that manages resources and communicates with hardware."
+6. Click the dropdown under question 3.
+7. Select "A complete Linux system built from the kernel and software."
+8. Click the dropdown under question 4.
+9. Select "The terminal is the window and the shell interprets commands."
+10. Click "Check orientation answers."
+11. Confirm a green success message appears.
+12. Confirm the top progress becomes 1/53.
+13. The page should move to the simulated Linux VM.
+
+If the answers are not accepted, compare every selection with the list above
+and click "Check orientation answers" again.
+
+
+PART 4 - UNDERSTAND THE TRAINING VM
+===================================
+
+The interface resembles a Linux security-training desktop.
+
+Top panel:
+
+- Applications opens the training application menu.
+- LINUX BASICS TRAINING VM identifies the fictional machine.
+- The right side shows language, status and local time.
+
+Left dock:
+
+- Terminal opens the 50 command missions.
+- Review opens the final questions.
+- Flag opens the final practical challenge.
+- Guide downloads this walkthrough.
+
+Mission panel:
+
+- Shows all 50 missions.
+- The current mission is highlighted.
+- Completed missions receive a tick.
+- Later missions stay locked until earlier commands are completed.
+
+Instruction card:
+
+- Explains the command before you run it.
+- Explains why you are learning it.
+- Shows the exact task and exact command.
+- Provides a beginner hint.
+- Contains Previous mission and Next mission buttons.
+
+Terminal window:
+
+- The black area displays commands and output.
+- The bottom line is where you type.
+- The prompt looks similar to:
+
+  student@linux-lab:~$
+
+- student is the fictional username.
+- linux-lab is the fictional hostname.
+- ~ represents /home/student, the student's home directory.
+- $ marks the location where a normal user types a command.
+
+
+HOW TO COMPLETE EVERY COMMAND MISSION
+=====================================
+
+Repeat this process for all 50 missions:
+
+1. Read the mission title.
+2. Read the command description.
+3. Read "Why you are using it."
+4. Read "Your exact task."
+5. Click inside the black terminal input at the bottom.
+6. Type the exact command shown in the instruction card.
+7. Press the Enter key or click the blue Run button.
+8. Read the command output.
+9. Read the green status message below the terminal.
+10. Click "Next mission."
+
+If typing is difficult:
+
+1. Click "Copy command."
+2. Click inside the terminal input.
+3. Paste the copied command.
+4. Press Enter.
+
+Linux is case-sensitive.
+Documents and documents are not the same name.
+Quotes, spaces, hyphens, dots and slashes matter.
+
+
+STAGE A - MEET THE TERMINAL
+===========================
+
+COMMAND 1 - WHOAMI
+------------------
+
+Purpose: Show the current username.
+
+1. Read the "Who am I?" card.
+2. Click inside the terminal input.
+3. Type:
+
+   whoami
+
+4. Press Enter.
+5. Expected output:
+
+   student
+
+6. This means the fictional signed-in user is student.
+7. Confirm progress becomes 2/53.
+8. Click "Next mission."
+
+
+COMMAND 2 - PWD
+---------------
+
+Purpose: Print the current working directory.
+
+1. Type:
+
+   pwd
+
+2. Press Enter.
+3. Expected output:
+
+   /home/student
+
+4. This is the full path of the current location.
+5. Confirm progress becomes 3/53.
+6. Click "Next mission."
+
+
+COMMAND 3 - HOSTNAME
+--------------------
+
+Purpose: Display the computer name.
+
+1. Type:
+
+   hostname
+
+2. Press Enter.
+3. Expected output:
+
+   linux-lab
+
+4. Hostnames help identify which computer you are using.
+5. Click "Next mission."
+
+
+COMMAND 4 - DATE
+----------------
+
+Purpose: Display the system date and time.
+
+1. Type:
+
+   date
+
+2. Press Enter.
+3. Read the simulated date output.
+4. Timestamps are useful when placing events and log entries in order.
+5. Click "Next mission."
+
+
+COMMAND 5 - UNAME
+-----------------
+
+Purpose: Display operating-system information.
+
+1. Type exactly:
+
+   uname -a
+
+2. Press Enter.
+3. The space separates the command from its option.
+4. The -a option requests all common system information.
+5. Confirm the output begins with Linux linux-lab.
+6. Click "Next mission."
+
+
+COMMAND 6 - ECHO
+----------------
+
+Purpose: Print text in the terminal.
+
+1. Type exactly:
+
+   echo "Hello Linux"
+
+2. Include both double quotation marks.
+3. Press Enter.
+4. Expected output:
+
+   Hello Linux
+
+5. The quotes keep the words together as one text value.
+6. Click "Next mission."
+
+
+STAGE B - LOOK AROUND
+=====================
+
+COMMAND 7 - LS
+--------------
+
+Purpose: List visible content in the current directory.
+
+1. Type:
+
+   ls
+
+2. Press Enter.
+3. Expected visible names include Desktop, Documents, Downloads, challenge
+   and logs.
+4. Use ls before moving around so you know what is available.
+5. Click "Next mission."
+
+
+COMMAND 8 - LS LONG FORMAT
+--------------------------
+
+Purpose: Show names with permissions, owner, size and date details.
+
+1. Type:
+
+   ls -l
+
+2. Use a lowercase letter l, not the number 1.
+3. Press Enter.
+4. Read the detailed rows.
+5. A name beginning with d in the first column is a directory.
+6. Click "Next mission."
+
+
+COMMAND 9 - SHOW HIDDEN NAMES
+-----------------------------
+
+Purpose: Include hidden files and directories.
+
+1. Type:
+
+   ls -a
+
+2. Press Enter.
+3. Find .profile and .training-note in the output.
+4. Linux hidden names commonly begin with a dot.
+5. Click "Next mission."
+
+
+COMMAND 10 - COMBINE OPTIONS
+----------------------------
+
+Purpose: Show a detailed listing that includes hidden names.
+
+1. Type:
+
+   ls -la
+
+2. Press Enter.
+3. The l requests long format and a requests all names.
+4. Read at least three rows of output.
+5. Click "Next mission."
+
+
+COMMAND 11 - CLEAR
+------------------
+
+Purpose: Clear visible terminal text without deleting files or history.
+
+1. Type:
+
+   clear
+
+2. Press Enter.
+3. The terminal display becomes empty.
+4. Your progress and fictional files still exist.
+5. Click "Next mission."
+
+
+COMMAND 12 - HISTORY
+--------------------
+
+Purpose: Review commands entered in this session.
+
+1. Type:
+
+   history
+
+2. Press Enter.
+3. A numbered list of earlier commands appears.
+4. Find whoami, pwd and ls in the history.
+5. Click "Next mission."
+
+
+STAGE C - MOVE SAFELY
+=====================
+
+COMMAND 13 - ENTER DOCUMENTS
+----------------------------
+
+Purpose: Change the current directory.
+
+1. Type exactly:
+
+   cd Documents
+
+2. Use capital D.
+3. Press Enter.
+4. A successful cd normally prints no output.
+5. Notice the prompt path changes to ~/Documents.
+6. Click "Next mission."
+
+
+COMMAND 14 - VERIFY LOCATION
+----------------------------
+
+Purpose: Confirm the result of the directory change.
+
+1. Type:
+
+   pwd
+
+2. Press Enter.
+3. Expected output:
+
+   /home/student/Documents
+
+4. Always verify important location changes.
+5. Click "Next mission."
+
+
+COMMAND 15 - LIST DOCUMENTS
+---------------------------
+
+Purpose: See what exists in Documents.
+
+1. Type:
+
+   ls
+
+2. Press Enter.
+3. Expected output:
+
+   Projects  welcome.txt
+
+4. Click "Next mission."
+
+
+COMMAND 16 - ENTER PROJECTS
+---------------------------
+
+1. Type:
+
+   cd Projects
+
+2. Use capital P.
+3. Press Enter.
+4. The prompt should show ~/Documents/Projects.
+5. Click "Next mission."
+
+
+COMMAND 17 - MOVE TO THE PARENT
+-------------------------------
+
+Purpose: Move one directory level upward.
+
+1. Type:
+
+   cd ..
+
+2. There is one space before the two dots.
+3. Press Enter.
+4. The prompt returns to ~/Documents.
+5. Two dots mean the parent directory.
+6. Click "Next mission."
+
+
+COMMAND 18 - RETURN HOME
+------------------------
+
+Purpose: Return quickly to the user's home directory.
+
+1. Type:
+
+   cd ~
+
+2. Press Enter.
+3. The prompt returns to ~.
+4. The tilde is a shortcut for /home/student.
+5. Click "Next mission."
+
+
+STAGE D - CREATE FILES
+======================
+
+COMMAND 19 - CREATE A DIRECTORY
+-------------------------------
+
+Purpose: Make a safe directory for practice.
+
+1. Type:
+
+   mkdir linux-practice
+
+2. Press Enter.
+3. mkdir means make directory.
+4. A successful mkdir normally prints no output.
+5. Click "Next mission."
+
+
+COMMAND 20 - ENTER THE PRACTICE DIRECTORY
+-----------------------------------------
+
+1. Type:
+
+   cd linux-practice
+
+2. Press Enter.
+3. The prompt should show ~/linux-practice.
+4. Click "Next mission."
+
+
+COMMAND 21 - CREATE AN EMPTY FILE
+---------------------------------
+
+Purpose: Create a text file for later exercises.
+
+1. Type:
+
+   touch notes.txt
+
+2. Press Enter.
+3. touch creates the file because it does not already exist.
+4. Click "Next mission."
+
+
+COMMAND 22 - CONFIRM THE FILE
+-----------------------------
+
+1. Type:
+
+   ls
+
+2. Press Enter.
+3. Expected output:
+
+   notes.txt
+
+4. This verifies that touch created the file.
+5. Click "Next mission."
+
+
+COMMAND 23 - WRITE INTO THE FILE
+--------------------------------
+
+Purpose: Redirect echo output into notes.txt.
+
+1. Type exactly:
+
+   echo "Linux practice complete" > notes.txt
+
+2. Include the quotation marks.
+3. Include one greater-than symbol.
+4. Press Enter.
+5. The command normally displays no output.
+6. The > symbol writes into the named file and replaces old content.
+7. Click "Next mission."
+
+
+COMMAND 24 - READ THE FILE
+--------------------------
+
+1. Type:
+
+   cat notes.txt
+
+2. Press Enter.
+3. Expected output:
+
+   Linux practice complete
+
+4. cat displays text-file content.
+5. Click "Next mission."
+
+
+COMMAND 25 - COPY THE FILE
+--------------------------
+
+Purpose: Keep the original and create a second file.
+
+1. Type:
+
+   cp notes.txt notes-copy.txt
+
+2. Press Enter.
+3. notes.txt is the source.
+4. notes-copy.txt is the new destination copy.
+5. Click "Next mission."
+
+
+COMMAND 26 - INSPECT BOTH FILES
+-------------------------------
+
+1. Type:
+
+   ls -l
+
+2. Press Enter.
+3. Confirm notes.txt and notes-copy.txt both appear.
+4. Click "Next mission."
+
+
+STAGE E - ORGANISE FILES
+========================
+
+COMMAND 27 - RENAME THE COPY
+----------------------------
+
+Purpose: Use mv to rename a file.
+
+1. Type:
+
+   mv notes-copy.txt backup.txt
+
+2. Press Enter.
+3. The first name is the current name.
+4. The second name is the new name.
+5. Click "Next mission."
+
+
+COMMAND 28 - CREATE AN ARCHIVE DIRECTORY
+----------------------------------------
+
+1. Type:
+
+   mkdir archive
+
+2. Press Enter.
+3. Click "Next mission."
+
+
+COMMAND 29 - MOVE THE BACKUP
+----------------------------
+
+Purpose: Move backup.txt into archive.
+
+1. Type:
+
+   mv backup.txt archive/
+
+2. Include the slash after archive.
+3. Press Enter.
+4. Click "Next mission."
+
+
+COMMAND 30 - CHECK THE ARCHIVE
+------------------------------
+
+Purpose: List another directory without entering it.
+
+1. Type:
+
+   ls archive
+
+2. Press Enter.
+3. Expected output:
+
+   backup.txt
+
+4. This verifies that the move worked.
+5. Click "Next mission."
+
+
+COMMAND 31 - CREATE A DISPOSABLE FILE
+-------------------------------------
+
+1. Type:
+
+   touch temporary.txt
+
+2. Press Enter.
+3. This file is created only for safe removal practice.
+4. Click "Next mission."
+
+
+COMMAND 32 - REMOVE THE DISPOSABLE FILE
+---------------------------------------
+
+Purpose: Learn that rm removes a file and must be used carefully.
+
+1. Type exactly:
+
+   rm temporary.txt
+
+2. Do not add an asterisk or any other option.
+3. Press Enter.
+4. Only the disposable training file is removed.
+5. A normal rm command does not use a normal desktop recycle bin.
+6. Always verify the target before using rm on a real system.
+7. Click "Next mission."
+
+
+STAGE F - READ AND SEARCH
+=========================
+
+COMMAND 33 - OPEN THE LOGS DIRECTORY
+------------------------------------
+
+1. Type:
+
+   cd ~/logs
+
+2. Press Enter.
+3. The prompt should show ~/logs.
+4. The ~ shortcut lets the path work from any current directory.
+5. Click "Next mission."
+
+
+COMMAND 34 - READ THE BEGINNING
+-------------------------------
+
+Purpose: Display the first ten lines of a file.
+
+1. Type:
+
+   head events.log
+
+2. Press Enter.
+3. Read the first few timestamped lines.
+4. head is useful when a file is too large to print completely.
+5. Click "Next mission."
+
+
+COMMAND 35 - READ THE ENDING
+----------------------------
+
+Purpose: Display the last ten lines of a file.
+
+1. Type:
+
+   tail events.log
+
+2. Press Enter.
+3. Read the most recent entries at the end.
+4. Click "Next mission."
+
+
+COMMAND 36 - COUNT LINES
+------------------------
+
+Purpose: Count the number of lines in events.log.
+
+1. Type:
+
+   wc -l events.log
+
+2. Use a lowercase l after the hyphen.
+3. Press Enter.
+4. Expected output:
+
+   12 events.log
+
+5. Click "Next mission."
+
+
+COMMAND 37 - FILTER ERROR LINES
+-------------------------------
+
+Purpose: Show only lines containing ERROR.
+
+1. Type exactly:
+
+   grep "ERROR" events.log
+
+2. ERROR must be uppercase.
+3. Include the quotation marks.
+4. Press Enter.
+5. Two ERROR lines should appear.
+6. grep saves time by showing only matching lines.
+7. Click "Next mission."
+
+
+COMMAND 38 - FIND A FILE
+------------------------
+
+Purpose: Search the home directory tree by filename.
+
+1. Type exactly:
+
+   find ~ -name "welcome.txt"
+
+2. Press Enter.
+3. Expected output:
+
+   /home/student/Documents/welcome.txt
+
+4. The search begins at ~ and looks for the supplied name.
+5. Click "Next mission."
+
+
+STAGE G - BASIC PERMISSIONS
+===========================
+
+COMMAND 39 - RETURN TO DOCUMENTS
+--------------------------------
+
+1. Type:
+
+   cd ~/Documents
+
+2. Use capital D.
+3. Press Enter.
+4. Click "Next mission."
+
+
+COMMAND 40 - READ FILE PERMISSIONS
+----------------------------------
+
+1. Type:
+
+   ls -l welcome.txt
+
+2. Press Enter.
+3. Expected permission beginning:
+
+   -rw-r--r--
+
+4. The first hyphen means it is a regular file.
+5. rw- means the owner can read and write.
+6. r-- means the group can read.
+7. The final r-- means other users can read.
+8. Click "Next mission."
+
+
+COMMAND 41 - ADD OWNER EXECUTE PERMISSION
+-----------------------------------------
+
+1. Type:
+
+   chmod u+x welcome.txt
+
+2. Press Enter.
+3. chmod changes permissions.
+4. u means the owning user.
+5. + means add.
+6. x means execute.
+7. Click "Next mission."
+
+
+COMMAND 42 - VERIFY PERMISSIONS
+-------------------------------
+
+1. Type:
+
+   ls -l welcome.txt
+
+2. Press Enter.
+3. Expected permission beginning:
+
+   -rwxr--r--
+
+4. The x in the owner section confirms the change.
+5. Click "Next mission."
+
+
+STAGE H - SIMPLE SYSTEM INFORMATION
+===================================
+
+COMMAND 43 - RETURN HOME
+------------------------
+
+1. Type:
+
+   cd ~
+
+2. Press Enter.
+3. Click "Next mission."
+
+
+COMMAND 44 - IDENTITY DETAILS
+-----------------------------
+
+1. Type:
+
+   id
+
+2. Press Enter.
+3. Read the uid, gid and groups output.
+4. uid identifies the user.
+5. gid identifies the primary group.
+6. Click "Next mission."
+
+
+COMMAND 45 - LOCATE BASH
+------------------------
+
+1. Type:
+
+   which bash
+
+2. Press Enter.
+3. Expected output:
+
+   /usr/bin/bash
+
+4. which shows the executable path that would be used.
+5. Click "Next mission."
+
+
+COMMAND 46 - STORAGE USAGE
+--------------------------
+
+1. Type:
+
+   df -h
+
+2. Press Enter.
+3. df reports filesystem storage.
+4. -h uses readable units such as G and M.
+5. Read the Size, Used, Avail and Use% columns.
+6. Click "Next mission."
+
+
+COMMAND 47 - MEMORY USAGE
+-------------------------
+
+1. Type:
+
+   free -h
+
+2. Press Enter.
+3. free reports memory and swap usage.
+4. Do not confuse it with df: df is storage; free is memory.
+5. Click "Next mission."
+
+
+COMMAND 48 - RUNNING PROCESSES
+------------------------------
+
+1. Type:
+
+   ps
+
+2. Press Enter.
+3. The output should include bash and ps.
+4. A process is a running program instance.
+5. Click "Next mission."
+
+
+COMMAND 49 - READ LOCAL HELP
+----------------------------
+
+1. Type:
+
+   man pwd
+
+2. Press Enter.
+3. Read the simulated manual page.
+4. NAME gives a short description.
+5. SYNOPSIS shows basic command structure.
+6. DESCRIPTION explains what the command does.
+7. On a real system, q normally closes a man page viewer.
+8. Click "Next mission."
+
+
+COMMAND 50 - COMPLETE HISTORY
+-----------------------------
+
+1. Type:
+
+   history
+
+2. Press Enter.
+3. Review the numbered list of commands.
+4. Confirm the status says all 50 command missions are complete.
+5. Confirm the top progress should now show 51/53.
+6. The final knowledge check is now unlocked.
+
+
+PART 5 - FINAL KNOWLEDGE CHECK
+==============================
+
+OPEN THE REVIEW
+
+1. Look at the vertical dock on the left.
+2. Click the icon labelled "Review."
+3. You may also click Applications and then Final Knowledge Check.
+4. The page displays eight questions.
+
+QUESTION 1
+
+Which command prints the current username?
+Select: whoami
+
+QUESTION 2
+
+Which command prints the current directory path?
+Select: pwd
+
+QUESTION 3
+
+What does cd .. do?
+Select: Moves to the parent directory
+
+QUESTION 4
+
+Which command creates an empty file named notes.txt?
+Select: touch notes.txt
+
+QUESTION 5
+
+Which command reads a text file?
+Select: cat file.txt
+
+QUESTION 6
+
+Which command shows lines containing ERROR?
+Select: grep "ERROR" events.log
+
+QUESTION 7
+
+Why should rm be used carefully?
+Select: It removes files without a normal recycle-bin step
+
+QUESTION 8
+
+What does Linux case-sensitive mean?
+Select: Names such as Documents and documents can be different
+
+SUBMIT THE REVIEW
+
+1. Confirm all eight questions have an answer.
+2. Click "Submit final answers."
+3. Look for the green 8/8 message.
+4. Confirm progress becomes 52/53.
+5. The Flag Hunt is now unlocked.
+
+
+PART 6 - FIND THE HIDDEN FLAG
+==============================
+
+OPEN THE FLAG HUNT
+
+1. Click the Flag icon in the left dock.
+2. Read the scenario.
+3. You must recover three harmless text fragments.
+4. Return to the Terminal by clicking "Return to terminal."
+5. The terminal may still show Mission 50. That is normal.
+6. You can now run the flag commands even though the missions are complete.
+
+
+FLAG STEP 1 - ENTER THE CHALLENGE DIRECTORY
+-------------------------------------------
+
+1. Click inside the terminal input.
+2. Type:
+
+   cd ~/challenge
+
+3. Press Enter.
+4. The prompt path changes to ~/challenge.
+
+
+FLAG STEP 2 - REVEAL HIDDEN FILES
+---------------------------------
+
+1. Type:
+
+   ls -la
+
+2. Press Enter.
+3. Find these names in the output:
+
+   .flag-part1
+   README.txt
+   archive
+   logs
+
+4. The dot makes .flag-part1 hidden from an ordinary ls listing.
+
+
+FLAG STEP 3 - READ THE INSTRUCTIONS
+-----------------------------------
+
+1. Type:
+
+   cat README.txt
+
+2. Press Enter.
+3. The file explains that you must read part 1, filter a log for part 2, find
+   part 3 and join the fragments with no spaces.
+
+
+FLAG STEP 4 - READ THE FIRST FRAGMENT
+-------------------------------------
+
+1. Type:
+
+   cat .flag-part1
+
+2. Press Enter.
+3. First fragment:
+
+   LINUX{
+
+4. Write it down exactly, including the opening curly brace.
+
+
+FLAG STEP 5 - FILTER FOR THE SECOND FRAGMENT
+--------------------------------------------
+
+1. Type exactly:
+
+   grep "FLAG_PART" logs/system.log
+
+2. Press Enter.
+3. Expected output:
+
+   FLAG_PART=BASICS_
+
+4. The value after the equals sign is the second fragment:
+
+   BASICS_
+
+5. Write it after the first fragment.
+
+
+FLAG STEP 6 - FIND THE THIRD-FRAGMENT FILE
+------------------------------------------
+
+1. Type exactly:
+
+   find . -name "part3.txt"
+
+2. Press Enter.
+3. The dot tells find to begin in the current challenge directory.
+4. Expected output:
+
+   ./archive/part3.txt
+
+
+FLAG STEP 7 - READ THE THIRD FRAGMENT
+-------------------------------------
+
+1. Type:
+
+   cat archive/part3.txt
+
+2. Press Enter.
+3. Third fragment:
+
+   COMPLETE}
+
+4. The closing curly brace ends the flag.
+
+
+FLAG STEP 8 - JOIN AND SUBMIT
+-----------------------------
+
+Join the values with no spaces:
+
+Part 1: LINUX{
+Part 2: BASICS_
+Part 3: COMPLETE}
+
+Complete flag:
+
+LINUX{BASICS_COMPLETE}
+
+1. Click the Flag icon in the left dock.
+2. Click inside "Enter the complete flag."
+3. Type exactly:
+
+   LINUX{BASICS_COMPLETE}
+
+4. Use uppercase letters.
+5. Do not add spaces.
+6. Click "Submit flag."
+7. Confirm a green success message appears.
+8. Confirm progress reaches 53/53.
+9. The certificate is now unlocked.
+
+
+PART 7 - DOWNLOAD THE CERTIFICATE
+=================================
+
+1. Click Applications in the VM top panel.
+2. Click Certificate.
+3. The certificate form should now be visible.
+4. Click inside "Name for certificate."
+5. Enter your full name exactly as it should appear.
+6. Check the spelling.
+7. Click "Download certificate."
+8. The browser downloads a PNG image.
+9. Open the browser Downloads list if the file is not visible.
+10. Open the certificate image and confirm the name.
+11. Submit or store the file according to your instructor's directions.
+
+
+COMPLETE COMMAND LIST
+=====================
+
+01  whoami
+02  pwd
+03  hostname
+04  date
+05  uname -a
+06  echo "Hello Linux"
+07  ls
+08  ls -l
+09  ls -a
+10  ls -la
+11  clear
+12  history
+13  cd Documents
+14  pwd
+15  ls
+16  cd Projects
+17  cd ..
+18  cd ~
+19  mkdir linux-practice
+20  cd linux-practice
+21  touch notes.txt
+22  ls
+23  echo "Linux practice complete" > notes.txt
+24  cat notes.txt
+25  cp notes.txt notes-copy.txt
+26  ls -l
+27  mv notes-copy.txt backup.txt
+28  mkdir archive
+29  mv backup.txt archive/
+30  ls archive
+31  touch temporary.txt
+32  rm temporary.txt
+33  cd ~/logs
+34  head events.log
+35  tail events.log
+36  wc -l events.log
+37  grep "ERROR" events.log
+38  find ~ -name "welcome.txt"
+39  cd ~/Documents
+40  ls -l welcome.txt
+41  chmod u+x welcome.txt
+42  ls -l welcome.txt
+43  cd ~
+44  id
+45  which bash
+46  df -h
+47  free -h
+48  ps
+49  man pwd
+50  history
+
+
+PROGRESS CHECKPOINTS
+====================
+
+After orientation: 1/53
+After command 10: 11/53
+After command 20: 21/53
+After command 30: 31/53
+After command 40: 41/53
+After command 50: 51/53
+After final knowledge check: 52/53
+After correct flag submission: 53/53
+
+
+TROUBLESHOOTING
+===============
+
+PROBLEM: THE PAGE LOOKS LIKE PLAIN TEXT
+
+1. Confirm index.html and styles.css are in the same folder.
+2. Confirm the stylesheet is named exactly styles.css.
+3. Refresh the page.
+
+
+PROBLEM: BUTTONS OR TERMINAL DO NOT WORK
+
+1. Confirm index.html and app.js are in the same folder.
+2. Confirm the script is named exactly app.js.
+3. Make sure JavaScript is enabled.
+4. Refresh the page.
+
+
+PROBLEM: MY COMMAND IS REJECTED
+
+1. Read the exact command in the instruction card.
+2. Check capital letters.
+3. Check every space.
+4. Check quotes, dots, slashes and hyphens.
+5. Remove any space before or after the complete command.
+6. Use Copy command if needed.
+7. Press Enter again.
+
+
+PROBLEM: I TYPED A LATER COMMAND
+
+The terminal may simulate it, but it will not complete the current mission.
+Type the exact command requested by the current instruction card.
+
+
+PROBLEM: NEXT MISSION IS DISABLED
+
+Run the current mission's exact command first. The button becomes available
+after the current mission is marked complete.
+
+
+PROBLEM: A LATER MISSION WILL NOT OPEN
+
+The lab keeps missions in order for beginners. Complete every earlier mission.
+
+
+PROBLEM: CD PRINTED NO OUTPUT
+
+That is normal. A successful cd usually changes the prompt without printing a
+message. The next pwd mission confirms the new location.
+
+
+PROBLEM: CLEAR REMOVED MY TERMINAL TEXT
+
+That is the purpose of clear. It did not remove files, history or progress.
+Continue with the next mission.
+
+
+PROBLEM: I CANNOT SEE A HIDDEN FILE
+
+Use ls -a or ls -la. Hidden Linux names begin with a dot.
+
+
+PROBLEM: I CANNOT FIND WELCOME.TXT
+
+Run:
+
+find ~ -name "welcome.txt"
+
+The expected path is /home/student/Documents/welcome.txt.
+
+
+PROBLEM: THE FINAL QUIZ IS LOCKED
+
+1. Complete the orientation check.
+2. Complete all 50 command missions.
+3. Confirm command 50 says all missions are complete.
+4. Open Review again.
+
+
+PROBLEM: THE FLAG HUNT IS LOCKED
+
+Pass all eight final knowledge questions first.
+
+
+PROBLEM: FLAG COMMANDS SAY THEY ARE NOT THE CURRENT MISSION
+
+After Mission 50, the terminal may still display that mission. The flag
+commands still run and produce output. The red mission reminder can be ignored
+during the unlocked flag hunt.
+
+
+PROBLEM: THE FLAG IS REJECTED
+
+1. Use uppercase letters.
+2. Include both curly braces.
+3. Include the underscore.
+4. Do not add spaces.
+5. Enter exactly:
+
+   LINUX{BASICS_COMPLETE}
+
+
+PROBLEM: THE CERTIFICATE IS LOCKED
+
+1. Confirm progress is 53/53.
+2. Confirm the flag received a green success message.
+3. Open Certificate again.
+
+
+PROBLEM: THE CERTIFICATE WILL NOT DOWNLOAD
+
+1. Enter at least two characters in the name field.
+2. Allow downloads if the browser asks.
+3. Click Download certificate again.
+
+
+PROBLEM: MY PROGRESS DISAPPEARED
+
+Progress is stored in the current browser.
+
+- Use the same browser and device.
+- Do not use private or incognito browsing.
+- Do not clear site data.
+- Do not click Reset.
+
+
+PROBLEM: I CLICKED RESET
+
+Reset asks for confirmation. If you confirmed it, saved progress was erased and
+the lab must be completed again.
+
+
+FINAL LEARNING CHECKLIST
+========================
+
+After completing the lab, you should be able to explain:
+
+1. Linux is an open-source operating system family.
+2. The kernel is the operating-system core.
+3. A distribution combines Linux with tools and software.
+4. A terminal is a window and a shell interprets commands.
+5. whoami displays the current user.
+6. pwd displays the current location.
+7. ls lists content and ls -la includes details and hidden names.
+8. cd changes location and cd ~ returns home.
+9. mkdir creates a directory and touch can create an empty file.
+10. cat displays text-file content.
+11. cp copies and mv moves or renames.
+12. rm removes files and must be used carefully.
+13. head and tail inspect the beginning and ending of files.
+14. grep filters matching lines and find searches directory trees.
+15. chmod changes permissions.
+16. df checks storage, free checks memory and ps shows processes.
+17. man provides local command documentation.
+18. Commands should be read, understood and verified before use.
+
+
+FINAL MEMORY SENTENCE
+=====================
+
+Read the explanation, check your location, type the command carefully, inspect
+the output and verify the result before moving to the next task.
