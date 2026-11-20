@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A long, beginner-friendly interactive Linux command lab with a simulated Kali-style desktop and terminal.">
+  <title>Linux Launchpad - Beginner Command Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home"><span class="brand-mark">L</span><span>Linux Launchpad</span></a>
+    <div class="global-progress"><span id="progressText">0/53 activities</span><div><i id="progressBar"></i></div></div>
+    <a class="guide-link" href="LINUX-LAB-COMPLETE-CLICK-BY-CLICK-WALKTHROUGH.txt" download>Student walkthrough</a>
+    <button class="reset-button" id="resetLab" type="button">Reset</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Absolute beginner lab · simulated Linux VM</p>
+        <h1>Meet Linux.<br><span>One command at a time.</span></h1>
+        <p class="hero-summary">Learn what Linux is, understand the terminal, practise 50 carefully explained commands, pass a final review and use your new skills to recover a hidden flag.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#orientation">Begin from zero</a>
+          <button class="button secondary" id="resumeLab" type="button">Resume progress</button>
+        </div>
+        <div class="hero-facts"><span>2–3 hours</span><span>53 activities</span><span>Unlimited retries</span><span>Hidden flag</span><span>Certificate</span></div>
+      </div>
+      <div class="desktop-preview" aria-label="Preview of the training desktop">
+        <div class="preview-panel"><span>Applications</span><span>student@linux-lab</span><span>10:30</span></div>
+        <div class="preview-window">
+          <div class="window-bar"><i></i><i></i><i></i><b>student@linux-lab: ~</b></div>
+          <pre><span>student@linux-lab</span>:<b>~</b>$ whoami
+student
+<span>student@linux-lab</span>:<b>~</b>$ pwd
+/home/student
+<span>student@linux-lab</span>:<b>~</b>$ <em>_</em></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="lesson" id="orientation">
+      <div class="section-heading"><p class="eyebrow">Orientation</p><h2>What is Linux?</h2></div>
+      <p class="lead">Linux is an open-source operating system family. An operating system manages a computer’s hardware, files, memory, programs and user interactions. Linux is used on servers, cloud platforms, supercomputers, embedded devices, security workstations and everyday computers.</p>
+      <div class="concept-grid">
+        <article><span>01</span><h3>Kernel</h3><p>The core that communicates with hardware and manages resources such as memory, processes and devices.</p></article>
+        <article><span>02</span><h3>Distribution</h3><p>A complete Linux system built from the kernel plus tools and software. Examples include Debian, Ubuntu, Fedora and Kali Linux.</p></article>
+        <article><span>03</span><h3>Shell</h3><p>A program that reads commands and asks the operating system to perform them. Bash and Zsh are common shells.</p></article>
+        <article><span>04</span><h3>Terminal</h3><p>The application window where you type commands and read their output. The terminal hosts a shell session.</p></article>
+      </div>
+      <div class="plain-note"><b>A useful distinction:</b> the terminal is the window; the shell is the command interpreter running inside it. This lab simulates both in your browser, so no real files or system settings are changed.</div>
+      <h3>Why learn the command line?</h3>
+      <div class="reason-grid">
+        <div><b>Precise</b><p>A command clearly states the operation you want.</p></div>
+        <div><b>Repeatable</b><p>The same command can be documented and used again.</p></div>
+        <div><b>Remote-friendly</b><p>Many servers are managed through text-based sessions.</p></div>
+        <div><b>Observable</b><p>Commands and their output provide useful evidence.</p></div>
+      </div>
+      <div class="safety-box"><h3>Safe learning boundaries</h3><ul><li>Type only the commands shown by the current mission.</li><li>Read a command’s description before running it.</li><li>Linux is case-sensitive: <code>Documents</code> and <code>documents</code> are different names.</li><li>Spaces, quotes, hyphens and capital letters matter.</li><li>This simulator is fictional and cannot change your real computer.</li></ul></div>
+
+      <div class="activity-card">
+        <div class="activity-number">ORIENTATION CHECK</div>
+        <h3>Confirm the four foundation ideas</h3>
+        <div id="orientationQuiz"></div>
+        <button class="button primary" id="checkOrientation" type="button">Check orientation answers</button>
+        <p class="feedback" id="orientationFeedback"></p>
+      </div>
+    </section>
+
+    <section class="command-map">
+      <div class="section-heading"><p class="eyebrow">Your route</p><h2>50 commands, divided into eight gentle stages</h2></div>
+      <div class="stage-grid">
+        <article><span>Stage A</span><h3>Meet the terminal</h3><p>Identity, location, hostname, date and simple output.</p><b>Commands 1–6</b></article>
+        <article><span>Stage B</span><h3>Look around</h3><p>List normal, detailed and hidden content; clear and review.</p><b>Commands 7–12</b></article>
+        <article><span>Stage C</span><h3>Move safely</h3><p>Change directories, confirm location and return home.</p><b>Commands 13–18</b></article>
+        <article><span>Stage D</span><h3>Create files</h3><p>Make a practice directory and create, write, read and copy files.</p><b>Commands 19–26</b></article>
+        <article><span>Stage E</span><h3>Organise files</h3><p>Rename, move, list and remove only a disposable practice file.</p><b>Commands 27–32</b></article>
+        <article><span>Stage F</span><h3>Read and search</h3><p>Inspect file beginnings and endings, count, filter and find.</p><b>Commands 33–38</b></article>
+        <article><span>Stage G</span><h3>Permissions</h3><p>Read a permission string and make a training file executable.</p><b>Commands 39–42</b></article>
+        <article><span>Stage H</span><h3>System basics</h3><p>Inspect identity, programs, storage, memory, processes and help.</p><b>Commands 43–50</b></article>
+      </div>
+    </section>
+
+    <section class="vm-section" id="commandLab">
+      <div class="vm-shell">
+        <div class="vm-topbar"><button type="button" id="applicationsButton">Applications</button><span class="vm-title">LINUX BASICS TRAINING VM</span><div class="vm-indicators"><span>EN</span><span>●</span><span id="vmClock">10:30</span></div></div>
+        <div class="applications-menu" id="applicationsMenu"><b>Training applications</b><button type="button" data-open="commands">Terminal Command Lab</button><button type="button" data-open="quiz">Final Knowledge Check</button><button type="button" data-open="flag">Flag Hunt</button><button type="button" data-open="certificate">Certificate</button></div>
+        <div class="vm-desktop">
+          <aside class="dock" aria-label="Training desktop shortcuts">
+            <button type="button" data-open="commands" title="Terminal">⌨<span>Terminal</span></button>
+            <button type="button" data-open="quiz" title="Final review">?<span>Review</span></button>
+            <button type="button" data-open="flag" title="Flag hunt">⚑<span>Flag</span></button>
+            <a href="LINUX-LAB-COMPLETE-CLICK-BY-CLICK-WALKTHROUGH.txt" download title="Walkthrough">☷<span>Guide</span></a>
+          </aside>
+
+          <div class="vm-pages">
+            <section class="vm-page active" id="vm-commands">
+              <div class="mission-panel">
+                <div class="mission-progress"><span id="missionStage">STAGE A</span><b id="missionCounter">1/50</b><div><i id="missionBar"></i></div></div>
+                <div class="mission-scroll" id="missionList"></div>
+              </div>
+              <div class="training-workspace">
+                <article class="instruction-card">
+                  <div><span id="commandNumber">COMMAND 01</span><span id="commandStage">MEET THE TERMINAL</span></div>
+                  <h2 id="commandTitle">Who am I?</h2>
+                  <p id="commandDescription"></p>
+                  <div class="command-purpose"><b>Why you are using it</b><p id="commandPurpose"></p></div>
+                  <div class="task-box"><b>Your exact task</b><p id="commandTask"></p><code id="expectedCommand"></code><button type="button" id="copyCommand">Copy command</button></div>
+                  <details><summary>Show beginner hint</summary><p id="commandHint"></p></details>
+                  <div class="mission-actions"><button class="button secondary" id="previousMission" type="button">Previous mission</button><button class="button primary" id="nextMission" type="button">Next mission</button></div>
+                </article>
+
+                <div class="terminal-window">
+                  <div class="terminal-titlebar"><div><i></i><i></i><i></i></div><span>student@linux-lab: terminal</span><button type="button" id="clearTerminal">Clear display</button></div>
+                  <div class="terminal-output" id="terminalOutput" aria-live="polite"><div class="boot-line">Linux Launchpad training terminal</div><div class="boot-line">Read the mission, type the command, then press Enter.</div></div>
+                  <form class="terminal-input-row" id="terminalForm">
+                    <label for="terminalInput" id="terminalPrompt"><span>student@linux-lab</span>:<b>~</b>$</label>
+                    <input id="terminalInput" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Linux command input">
+                    <button type="submit">Run</button>
+                  </form>
+                </div>
+                <p class="terminal-status" id="terminalStatus">Mission ready. Type the exact command shown in the instruction card.</p>
+              </div>
+            </section>
+
+            <section class="vm-page review-page" id="vm-quiz">
+              <div class="page-toolbar"><div><p>FINAL KNOWLEDGE CHECK</p><h2>Explain what the commands mean</h2></div><button type="button" data-open="commands">Return to terminal</button></div>
+              <div class="unlock-note" id="quizUnlock">Complete all 50 command missions to unlock the final questions.</div>
+              <div class="quiz-content locked-content" id="quizContent"><div id="finalQuiz"></div><button class="button primary" id="checkFinalQuiz" type="button">Submit final answers</button><p class="feedback" id="finalQuizFeedback"></p></div>
+            </section>
+
+            <section class="vm-page flag-page" id="vm-flag">
+              <div class="page-toolbar"><div><p>FINAL PRACTICAL CHALLENGE</p><h2>Recover the hidden flag</h2></div><button type="button" data-open="commands">Return to terminal</button></div>
+              <div class="unlock-note" id="flagUnlock">Pass the final knowledge check to unlock the flag hunt.</div>
+              <div class="flag-content locked-content" id="flagContent">
+                <div class="flag-brief"><b>Scenario</b><p>Your instructor stored three harmless flag fragments inside the fictional <code>~/challenge</code> directory. Use navigation, hidden-file listing, reading, filtering and finding commands to recover them. Join the fragments with no spaces.</p></div>
+                <ol class="flag-steps">
+                  <li><b>Move into the challenge:</b><code>cd ~/challenge</code></li>
+                  <li><b>Reveal hidden names:</b><code>ls -la</code></li>
+                  <li><b>Read the instructions:</b><code>cat README.txt</code></li>
+                  <li><b>Read the hidden first fragment:</b><code>cat .flag-part1</code></li>
+                  <li><b>Filter the log for the second fragment:</b><code>grep "FLAG_PART" logs/system.log</code></li>
+                  <li><b>Find the third fragment:</b><code>find . -name "part3.txt"</code></li>
+                  <li><b>Read the file returned by find:</b><code>cat archive/part3.txt</code></li>
+                </ol>
+                <div class="flag-entry"><label for="flagInput">Enter the complete flag</label><input id="flagInput" placeholder="LINUX{...}" autocomplete="off"><button class="button primary" id="submitFlag" type="button">Submit flag</button><p class="feedback" id="flagFeedback"></p></div>
+              </div>
+            </section>
+
+            <section class="vm-page certificate-page" id="vm-certificate">
+              <div class="page-toolbar"><div><p>COMPLETION REWARD</p><h2>Linux Basics certificate</h2></div><button type="button" data-open="commands">Return to terminal</button></div>
+              <div class="unlock-note" id="certificateUnlock">Find and submit the correct flag to unlock your certificate.</div>
+              <div class="certificate-content locked-content" id="certificateContent"><p>You completed 50 commands, the knowledge check and the practical flag hunt.</p><label for="studentName">Name for certificate</label><input id="studentName" placeholder="Enter your full name"><button class="button primary" id="downloadCertificate" type="button">Download certificate</button><canvas id="certificateCanvas" width="1400" height="990"></canvas></div>
+            </section>
+          </div>
+        </div>
+        <div class="vm-bottombar"><span>Training mode · No commands run on your real computer</span><span id="saveStatus">Progress saved locally</span></div>
+      </div>
+    </section>
+
+    <section class="reference-section">
+      <div class="section-heading"><p class="eyebrow">Keep nearby</p><h2>Beginner command reference</h2></div>
+      <div class="reference-table-wrap"><table><thead><tr><th>Command</th><th>Plain meaning</th><th>Example</th></tr></thead><tbody>
+        <tr><td><code>whoami</code></td><td>Show the current username.</td><td><code>whoami</code></td></tr>
+        <tr><td><code>pwd</code></td><td>Print the current directory path.</td><td><code>pwd</code></td></tr>
+        <tr><td><code>ls</code></td><td>List directory content.</td><td><code>ls -la</code></td></tr>
+        <tr><td><code>cd</code></td><td>Change the current directory.</td><td><code>cd Documents</code></td></tr>
+        <tr><td><code>mkdir</code></td><td>Create a directory.</td><td><code>mkdir practice</code></td></tr>
+        <tr><td><code>touch</code></td><td>Create an empty file or update its timestamp.</td><td><code>touch notes.txt</code></td></tr>
+        <tr><td><code>cat</code></td><td>Display a text file.</td><td><code>cat notes.txt</code></td></tr>
+        <tr><td><code>cp</code></td><td>Copy a file.</td><td><code>cp a.txt b.txt</code></td></tr>
+        <tr><td><code>mv</code></td><td>Move or rename a file.</td><td><code>mv old.txt new.txt</code></td></tr>
+        <tr><td><code>rm</code></td><td>Remove a file. Use carefully.</td><td><code>rm temporary.txt</code></td></tr>
+        <tr><td><code>head</code></td><td>Show the first lines of a file.</td><td><code>head events.log</code></td></tr>
+        <tr><td><code>tail</code></td><td>Show the last lines of a file.</td><td><code>tail events.log</code></td></tr>
+        <tr><td><code>wc</code></td><td>Count lines, words or bytes.</td><td><code>wc -l events.log</code></td></tr>
+        <tr><td><code>grep</code></td><td>Show lines containing a pattern.</td><td><code>grep "ERROR" events.log</code></td></tr>
+        <tr><td><code>find</code></td><td>Search for filesystem items.</td><td><code>find ~ -name "welcome.txt"</code></td></tr>
+        <tr><td><code>chmod</code></td><td>Change file permissions.</td><td><code>chmod u+x file</code></td></tr>
+        <tr><td><code>man</code></td><td>Read a command manual page.</td><td><code>man pwd</code></td></tr>
+      </tbody></table></div>
+    </section>
+  </main>
+
+  <footer><b>Linux Launchpad</b><span>Fictional browser VM · GitHub Pages compatible · No external dependencies</span></footer>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
